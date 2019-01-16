@@ -7,14 +7,8 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavComponent } from './nav/nav.component';
 import { AdminModule } from './admin/admin.module';
-// import { AppRoutingModule }        from './app-routing.module';
+import { AppRoutingModule }        from './app-routing.module';
 import { RouterModule, Routes } from '@angular/router';
-
-
-const appRoutes: Routes = [
-  { path: 'crisis-center', component: AdminModule },
-  { path: 'nav', component: NavComponent },
-];
 
 @NgModule({
   declarations: [
@@ -32,10 +26,7 @@ const appRoutes: Routes = [
     MatOptionModule,
     MatInputModule,
     AdminModule,
-    RouterModule.forRoot(
-      appRoutes,
-      { enableTracing: true } // <-- debugging purposes only
-    )
+    AppRoutingModule
     // RouterModule
   ],
   providers: [],
